@@ -10,7 +10,8 @@ void CustomWiFiManager(){
     wifiManager.setDebugOutput(true); //Habilita debug serie, deshabilitar a gusto
 
     wifiManager.setAPStaticIPConfig(IPAddress(10,0,1,1), IPAddress(10,0,1,1), IPAddress(255,255,255,0)); //Definir IP de acceso a Panel WiFi Manager
-    wifiManager.setSTAStaticIPConfig(IPAddress(192,168,0,99), IPAddress(192,168,0,1), IPAddress(255,255,255,0)); //Configuración de red Final (optional DNS 4th argument)
+    //⬇⬇ COMENTAR PARA USAR DHCP ⬇⬇
+    wifiManager.setSTAStaticIPConfig(IPAddress(192,168,100,99), IPAddress(192,168,100,1), IPAddress(255,255,255,0)); //Configuración de red MANUAL (opcional DNS 4to argumento)
 
     wifiManager.setCustomHeadElement("<style>button{background-color: #9c103c;}</style>"); //CSS botones
     wifiManager.setClass("invert"); //Tema oscuro
